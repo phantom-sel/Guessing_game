@@ -1,0 +1,16 @@
+secret_number = 18    
+print('you have 5 chance for win the game')
+number_of_guesses = 0
+guess_left = 4
+while number_of_guesses <= guess_left:
+    guess = int(input('guess the number: '))
+    number_of_guesses += 1
+    if guess == secret_number:
+        print('you won!')
+        break
+    elif guess < secret_number:
+        print('please! increase the number','       chance:',{number_of_guesses})
+    else:
+        print('please! decrease the number','       chance:',{number_of_guesses})
+else:
+    print("sorry you are failes this game!")
